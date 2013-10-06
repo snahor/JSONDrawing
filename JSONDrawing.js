@@ -11,31 +11,31 @@ var canvas = document.getElementsByTagName('canvas')[0],
       'gray': 'gray', '0xc0c0c0': 'gray', '#c0c0c0': 'gray'
     },
     instructions = {
-			pen: function (color) {
-				context.strokeStyle = colors[color];
-			},
-			fill: function (color) {
+      pen: function (color) {
+        context.strokeStyle = colors[color];
+      },
+      fill: function (color) {
         context.fillStyle = colors[color];
-			},
-			width: function (width) {
-				context.lineWidth = width;
-			},
-			line: function (params) {
+      },
+      width: function (width) {
+        context.lineWidth = width;
+      },
+      line: function (params) {
         context.moveTo(params[0], params[1]);
         context.lineTo(params[2], params[3]);
-			},
-			circle: function (params) {
-				context.arc(params[0], params[1], params[2], 0, 6.283185307179586);
-			},
-			box: function (params) {
-				context.rect(params[0], params[1],
+      },
+      circle: function (params) {
+        context.arc(params[0], params[1], params[2], 0, 6.283185307179586);
+      },
+      box: function (params) {
+        context.rect(params[0], params[1],
                      params[2] - params[0],
                      params[3] - params[1]);
-			},
-			background: function (color) {
-				canvas.style.background = colors[color];
-			}
-		};
+      },
+      background: function (color) {
+        canvas.style.background = colors[color];
+      }
+    };
 
 // background
 canvas.style.background = 'black';
